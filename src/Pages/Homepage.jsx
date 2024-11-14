@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 import Spinner from "../customer/Components/Spinners/Spinner";
 import CategoryGrid from "../customer/Components/Home/CategoryGrid";
 import AdvertisedProducts from "../customer/Components/Carousel/AdvertiesProduct";
 import { API_BASE_URL } from "../config/api";
 import BannerSlider from "../customer/Components/Home/BannerSlider";
-import Carousel from "../customer/Components/Carousel/Carousel"
+import Carousel from "../customer/Components/Carousel/Carousel";
 const Homepage = () => {
   const [banners, setBanners] = useState();
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ const Homepage = () => {
   const staticBanners = [
     "https://www.riteaid.com/content/dam/riteaid-web/campaigns/fy25/home-page-banners/11-10-24-home-page-banners/Herobanner3.png",
     "https://www.riteaid.com/content/dam/riteaid-web/campaigns/fy25/home-page-banners/11-10-24-home-page-banners/herobanner1.png",
-    "https://www.riteaid.com/content/dam/riteaid-web/campaigns/fy25/home-page-banners/11-10-24-home-page-banners/Herobanner2.png"
+    "https://www.riteaid.com/content/dam/riteaid-web/campaigns/fy25/home-page-banners/11-10-24-home-page-banners/Herobanner2.png",
   ];
 
   // Banner Auto Slide
@@ -65,16 +65,15 @@ const Homepage = () => {
              
               </motion.div>
             </section> */}
-            <BannerSlider/>
+            <BannerSlider />
           </Link>
           <div>
             <CategoryGrid />
           </div>
           <div className="my-16 py-10">
-
-         < Carousel text="Advertised Products"/>
+            <Carousel text="Advertised Products" />
           </div>
-            {/* <AdvertisedProducts /> */}
+          {/* <AdvertisedProducts /> */}
           <FlexDiv>
             <Link to="/search">
               {/* <div className="hover">
@@ -83,13 +82,20 @@ const Homepage = () => {
             </Link>
             <Link to="/search">
               <div className="hover">
-                <img src="https://retailmedia-static.azureedge.net/creativeassets-live/997b319826883b5aa1260b24c8be7336c901183f3d92e8f1d86e89b72ca7b3de.jpg" alt="Advertisement 2" />
+                <img
+                  src="https://retailmedia-static.azureedge.net/creativeassets-live/997b319826883b5aa1260b24c8be7336c901183f3d92e8f1d86e89b72ca7b3de.jpg"
+                  alt="Advertisement 2"
+                />
               </div>
             </Link>
           </FlexDiv>
           <Link to="/search">
             <div className="firstbanner mb-10">
-              <img src="https://www.riteaid.com/content/dam/riteaid-web/campaigns/fy25/home-page-banners/11-10-24-home-page-banners/HomePage_Desktop-Footer.png" alt="Footer Banner" />
+              <img
+                src="https://www.riteaid.com/content/dam/riteaid-web/campaigns/fy25/home-page-banners/11-10-24-home-page-banners/HomePage_Desktop-Footer.png"
+                alt="Footer Banner"
+                className="w-full h-auto object-contain"
+              />
             </div>
           </Link>
         </>

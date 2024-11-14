@@ -23,7 +23,7 @@ const CartItem = ({
 }) => {
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
-  console.log(item?.id, "item---------");
+  // console.log(item?.id, "item---------");
 
   const handleUpdateQuantity = (num) => {
     const updatedQuantity = item.quantity + num;

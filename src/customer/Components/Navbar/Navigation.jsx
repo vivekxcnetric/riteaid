@@ -187,6 +187,8 @@ const Navbar = () => {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
     setDropdownOpen(false);
+
+    navigate("/sign-in", { replace: true });
   };
 
   const handleSearchClick = () => {
