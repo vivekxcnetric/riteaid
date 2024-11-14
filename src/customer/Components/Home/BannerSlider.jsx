@@ -47,7 +47,7 @@ const BannerSlider = () => {
           <img
             src={banner.imageSrc}
             alt={`Banner ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
       ))}
