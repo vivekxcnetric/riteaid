@@ -166,6 +166,8 @@ import {
   FiUser,
   FiShoppingCart,
   FiMapPin,
+  FiClipboard,
+  FiLogOut,
 } from "react-icons/fi";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -284,20 +286,23 @@ const Navbar = () => {
               >
                 <Link
                   to="/account"
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-100 transition duration-200"
+                  className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition duration-200"
                 >
+                  <FiUser className="mr-2" />
                   Account
                 </Link>
                 <Link
                   to="/orders"
-                  className="block px-4 py-3 text-gray-700 hover:bg-gray-100 transition duration-200"
+                  className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition duration-200"
                 >
+                  <FiClipboard className="mr-2" />
                   Orders
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 transition duration-200"
+                  className="flex items-center w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 transition duration-200"
                 >
+                  <FiLogOut className="mr-2" />
                   Logout
                 </button>
               </motion.div>
