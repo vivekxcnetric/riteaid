@@ -21,32 +21,7 @@ const getEstimatedDeliveryDate = () => {
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const { cart } = useSelector((store) => store?.cartItems?.cartItems);
-  // const cart = {
-  //   id: "3",
-  //   lines: [
-  //     {
-  //       id: "1",
-  //       quantity: 2,
-  //       linePrice: 50.4,
-  //       productVariant: {
-  //         id: "96",
-  //         name: "Neutrogena Clear & Defend Facial Wash 200ml",
-  //         price: 25.2,
-  //         currencyCode: "USD",
-  //         images: [
-  //           {
-  //             url: "http://106.51.242.196:3000/assets/preview/d9/1-2__preview.png",
-  //           },
-  //         ],
-  //       },
-  //     },
-  //   ],
-  //   total: 50.4,
-  //   currencyCode: "USD",
-  //   totalQuantity: 2,
-  // };
-
+  const cart = useSelector((store) => store?.cartItems?.cartItems?.cart); // Using optional chaining to avoid destructuring error
   const [showCouponForm, setShowCouponForm] = useState(false);
   const estimatedDeliveryDate = getEstimatedDeliveryDate();
 
@@ -83,20 +58,6 @@ const Cart = () => {
           </div>
           <div className="lg:w-1/3 space-y-4">
             <div className="bg-gray-100 rounded-lg p-6 shadow-md">
-              {/* <div className="text-pink-600 bg-pink-100 p-4 rounded-lg mb-4">
-                <h2 className="text-lg font-semibold">Rite Aid Rewards</h2>
-                <p className="mt-1">
-                  Sign in to earn/redeem BonusCash and clipped coupons.
-                </p>
-                <div className="flex mt-3 space-x-4">
-                  <button className="bg-white text-pink-600 py-1 px-3 rounded-md font-medium">
-                    Create Account
-                  </button>
-                  <button className="bg-white text-pink-600 py-1 px-3 rounded-md font-medium">
-                    Sign In
-                  </button>
-                </div>
-              </div> */}
               <div>
                 <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
                 <div className="flex justify-between mb-2">
@@ -118,7 +79,6 @@ const Cart = () => {
                   </button>
                 </Link>
                 <div className="flex justify-center mt-4 space-x-2">
-                  {/* Replace with actual paths to payment method icons */}
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlKaYFu855kzoydaqxJyEJZPwLXkbBG2OPlA&s"
                     alt="Visa"
