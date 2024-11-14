@@ -24,10 +24,6 @@ const CartItem = ({
   const dispatch = useDispatch();
   const jwt = localStorage.getItem("jwt");
   console.log(item?.id, "item---------");
-  const handleRemoveItem = () => {
-    // Dispatch the removeCartItem action
-    // dispatch(removeCartItem(item.id, jwt));
-  };
 
   const handleUpdateQuantity = (num) => {
     const updatedQuantity = item.quantity + num;
@@ -36,6 +32,10 @@ const CartItem = ({
     updateCartQtyNEW({ lineId: item.id, quantity: updatedQuantity }).then(
       dispatch(getCartItems())
     );
+  };
+  const handleRemoveItem = () => {
+    // Dispatch the RemoveCartItemNew action to remove the item from the cart
+    dispatch(RemoveCartItemNew(item.id));
   };
 
   // useEffect(() => {

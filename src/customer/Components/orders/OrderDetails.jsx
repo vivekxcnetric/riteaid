@@ -374,7 +374,7 @@ const OrderDetails = () => {
       <Container>
         <BackLink style={{ display: "flex", fontSize: "18px", gap: "5px" }}>
           <FaLongArrowAltLeft />
-          <Link to="/account/order"> Orders</Link>
+          <Link to="/orders"> Orders</Link>
         </BackLink>
         <OrderTitle>Order Details #{data?.id}</OrderTitle>
         <OrderDate>Placed On: {formatDate(data?.orderPlacedAt)}</OrderDate>
